@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Doces Girasonhos | Doces artesanais para festas</title>
+<meta name="description" content="Brigadeiros, palha italiana, cocadas e trufas artesanais para festas e eventos em São Manuel e Botucatu." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --sun:#F5B82E; --sun-soft:#FFE9A8; --butter:#FFF9E6;
+  --seed:#3B2314; --seed-soft:#6B4A3A;
+  --leaf:#4F7A3A; --mint:#CFE8D6;
+  --berry:#C9486B; --berry-dark:#9E2F50;
+  --white:#fff; --shadow:0 10px 30px rgba(59,35,20,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:'Nunito',Arial,sans-serif;background:var(--butter);color:var(--seed);line-height:1.7}
+h1,h2,h3,h4,.logo{font-family:'Fraunces',Georgia,serif;line-height:1.1;margin:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+
+/* Header */
+header{background:var(--seed);position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap}
+.logo{color:var(--sun);font-size:1.5rem;font-weight:800;display:flex;align-items:center;gap:10px}
+.logo svg{width:34px;height:34px}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:var(--sun-soft);font-weight:700;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--sun)}
+
+/* Buttons */
+.btn{display:inline-block;border:0;border-radius:999px;padding:14px 28px;font:700 1rem 'Nunito',sans-serif;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--berry);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--berry-dark)}
+.btn-secondary{background:transparent;color:var(--seed);border:2px solid rgba(59,35,20,.45)}
+.btn-small{padding:9px 18px;font-size:.9rem}
+
+/* Hero */
+.hero{background:var(--sun);padding:72px 0 90px;position:relative;overflow:hidden}
+.hero-content{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:800;margin-bottom:20px}
+.hero p{font-size:1.12rem;max-width:520px;margin:0 0 28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{position:relative}
+.hero-visual img{width:100%;height:480px;object-fit:cover;border-radius:50% 50% 24px 24px / 38% 38% 24px 24px;box-shadow:var(--shadow);border:6px solid var(--butter)}
+.badge{position:absolute;background:var(--seed);color:var(--sun-soft);padding:12px 18px;border-radius:16px;font-weight:700;box-shadow:var(--shadow)}
+.badge-bottom{right:-8px;bottom:26px}
+.wave{position:absolute;left:0;bottom:-1px;width:100%;height:50px;display:block}
+
+/* Section heads */
+.section-head{max-width:640px;margin:0 auto 44px;text-align:center}
+.section-head h2{font-size:clamp(1.9rem,3.2vw,2.8rem);margin-bottom:12px}
+.section-head p{margin:0;color:var(--seed-soft)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-grid h3{font-size:2rem;margin-bottom:14px}
+.about-grid p{color:var(--seed-soft);margin:0 0 20px}
+.about-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.about-list li{padding-left:30px;position:relative;font-weight:700}
+.about-list li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--sun);border:4px solid var(--leaf)}
+.about-image img{width:100%;height:440px;object-fit:cover;border-radius:24px;box-shadow:var(--shadow)}
+
+/* Products */
+.products{background:var(--mint)}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.product-card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.product-card .thumb{overflow:hidden;position:relative}
+.product-card img{height:220px;width:100%;object-fit:cover;transition:transform .4s}
+.product-card:hover img{transform:scale(1.05)}
+.seal{position:absolute;top:12px;left:12px;background:var(--sun);color:var(--seed);font-weight:800;font-size:.8rem;padding:4px 12px;border-radius:999px}
+.product-info{padding:20px;display:flex;flex-direction:column;flex:1}
+.product-info h3{font-size:1.4rem;margin-bottom:6px}
+.product-info p{margin:0 0 16px;color:var(--seed-soft);flex:1}
+.product-meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-family:'Fraunces',serif;font-weight:800;color:var(--berry-dark);font-size:1.4rem}
+.tiny{font-size:.85rem;color:var(--seed-soft);display:block}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;list-style:none;padding:0;margin:0}
+.step{background:#fff;border-radius:20px;padding:24px 18px;text-align:center;box-shadow:var(--shadow)}
+.step-number{width:48px;height:48px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--sun);font:800 1.2rem 'Fraunces',serif;margin-bottom:10px}
+.step h3{font-size:1.2rem;margin-bottom:6px}
+.step p{margin:0;color:var(--seed-soft);font-size:.95rem}
+
+/* Parties */
+.parties{background:var(--seed);color:#fff}
+.parties-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}
+.parties h2{font-size:2.2rem;margin-bottom:14px;color:var(--sun)}
+.parties p{color:rgba(255,255,255,.88);margin:0 0 16px}
+.check-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.check-list li{padding-left:24px;position:relative;color:rgba(255,255,255,.92)}
+.check-list li::before{content:"✓";position:absolute;left:0;color:var(--sun);font-weight:800}
+.pricing-table{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pricing-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:22px 18px}
+.pricing-card.featured{background:var(--sun);color:var(--seed)}
+.pricing-card h3{font-size:1.2rem}
+.big-price{font:800 2rem 'Fraunces',serif;margin:8px 0 10px;color:var(--sun)}
+.pricing-card.featured .big-price{color:var(--seed)}
+.pricing-card ul{list-style:none;padding:0;margin:0 0 14px;line-height:1.9}
+.pricing-card .btn-small{background:var(--berry);color:#fff;width:100%;text-align:center}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+blockquote{margin:0;background:#fff;border-left:6px solid var(--sun);border-radius:6px 20px 20px 6px;padding:22px;box-shadow:var(--shadow)}
+blockquote p{margin:0 0 12px}
+blockquote cite{font-weight:700;font-style:normal;color:var(--leaf)}
+
+/* Order */
+.order{background:var(--sun-soft)}
+.order-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:start}
+.order-info,.order-form{background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:30px}
+.order-info h2,.order-form h2{font-size:1.9rem;margin-bottom:12px}
+.contact-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.contact-list a{color:var(--berry-dark);font-weight:700;text-decoration:underline}
+form{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-weight:700}
+input,select,textarea{width:100%;border:2px solid rgba(59,35,20,.18);border-radius:12px;padding:12px 14px;font:inherit;font-weight:400;background:var(--butter);color:var(--seed)}
+input:focus,select:focus,textarea:focus{border-color:var(--berry);outline:none}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:.85rem;color:var(--seed-soft);margin:0}
+
+/* Footer + floating button */
+footer{background:var(--seed);color:var(--sun-soft);padding:26px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.whats-float{position:fixed;right:18px;bottom:18px;z-index:30;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.whats-float svg{width:30px;height:30px}
+
+@media (max-width:900px){
+  .hero-content,.about-grid,.parties-grid,.order-grid{grid-template-columns:1fr}
+  .products-grid,.steps,.testimonials-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-visual img{height:360px}
+}
+@media (max-width:640px){
+  section{padding:56px 0}
+  header{position:static}
+  .header-inner{justify-content:center}
+  nav{justify-content:center;gap:16px}
+  .products-grid,.steps,.testimonials-grid,.pricing-table,.row{grid-template-columns:1fr}
+  .hero-visual img{height:300px}
+  .badge-bottom{right:8px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="#inicio" aria-label="Doces Girasonhos, início">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="#F5B82E"><ellipse cx="32" cy="9" rx="6" ry="9"/><ellipse cx="32" cy="55" rx="6" ry="9"/><ellipse cx="9" cy="32" rx="9" ry="6"/><ellipse cx="55" cy="32" rx="9" ry="6"/><ellipse cx="15.7" cy="15.7" rx="6" ry="9" transform="rotate(-45 15.7 15.7)"/><ellipse cx="48.3" cy="48.3" rx="6" ry="9" transform="rotate(-45 48.3 48.3)"/><ellipse cx="48.3" cy="15.7" rx="6" ry="9" transform="rotate(45 48.3 15.7)"/><ellipse cx="15.7" cy="48.3" rx="6" ry="9" transform="rotate(45 15.7 48.3)"/></g><circle cx="32" cy="32" r="11" fill="#6B4A3A"/></svg>
+      Doces Girasonhos
+    </a>
+    <nav aria-label="Menu principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#doces">Doces</a>
+      <a href="#festas">Festas</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#pedidos">Pedidos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <div>
+        <h1>Doces artesanais que fazem a festa brilhar.</h1>
+        <p>Brigadeiros, palha italiana, cocadas e trufas feitos à mão, com ingredientes selecionados, para festas e encomendas em São Manuel e Botucatu.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#doces">Ver cardápio</a>
+          <a class="btn btn-secondary" href="#pedidos">Pedir orçamento</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80" alt="Mesa de festa com doces variados" />
+        <div class="badge badge-bottom">Festas sob medida</div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path fill="#FFF9E6" d="M0 30 Q 180 0 360 25 T 720 25 T 1080 25 T 1440 20 V50 H0Z"/></svg>
+  </section>
+
+  <section id="sobre">
+    <div class="container about-grid">
+      <div>
+        <h2 style="font-size:2.2rem;margin-bottom:14px">Feito com carinho, do jeito que a gente gosta de comer.</h2>
+        <p>Trabalhamos com receitas tradicionais e versões modernas, pensando no sabor e na apresentação de cada doce na sua mesa.</p>
+        <ul class="about-list">
+          <li>Ingredientes selecionados e frescos</li>
+          <li>Opções para festas infantis e corporativas</li>
+          <li>Embalagem elegante para presentear</li>
+          <li>Atendimento rápido e personalizado</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=900&q=80" alt="Mesa com doces e sobremesas" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="doces">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nossos doces mais pedidos</h2>
+        <p>Escolha seus favoritos e peça direto pelo WhatsApp.</p>
+      </div>
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="thumb"><span class="seal">Mais pedido</span><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80" alt="Brigadeiros" loading="lazy" /></div>
+          <div class="product-info">
+            <h3>Brigadeiro</h3>
+            <p>Clássico, cremoso e irresistível, perfeito para qualquer ocasião.</p>
+            <div class="product-meta"><div><span class="tiny">caixa com 20 un.</span><span class="price">R$ 28,00</span></div><a class="btn btn-primary btn-small" data-doce="Brigadeiro (caixa com 20 un.)" href="#pedidos">Pedir</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=900&q=80" alt="Palha italiana" loading="lazy" /></div>
+          <div class="product-info">
+            <h3>Palha Italiana</h3>
+            <p>Chocolate cremoso com biscoito crocante, o sabor que todo mundo ama.</p>
+            <div class="product-meta"><div><span class="tiny">porção</span><span class="price">R$ 35,00</span></div><a class="btn btn-primary btn-small" data-doce="Palha Italiana (porção)" href="#pedidos">Pedir</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80" alt="Cocadas" loading="lazy" /></div>
+          <div class="product-info">
+            <h3>Cocada</h3>
+            <p>Doce tradicional com textura rica e sabor tropical.</p>
+            <div class="product-meta"><div><span class="tiny">porção com 12 un.</span><span class="price">R$ 24,00</span></div><a class="btn btn-primary btn-small" data-doce="Cocada (porção com 12 un.)" href="#pedidos">Pedir</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=900&q=80" alt="Beijinhos" loading="lazy" /></div>
+          <div class="product-info">
+            <h3>Beijinho</h3>
+            <p>Macio e delicado, ideal para festas e lembrancinhas.</p>
+            <div class="product-meta"><div><span class="tiny">caixa com 20 un.</span><span class="price">R$ 30,00</span></div><a class="btn btn-primary btn-small" data-doce="Beijinho (caixa com 20 un.)" href="#pedidos">Pedir</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb"><span class="seal">Novo</span><img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?auto=format&fit=crop&w=900&q=80" alt="Trufas de chocolate" loading="lazy" /></div>
+          <div class="product-info">
+            <h3>Trufa</h3>
+            <p>Chocolate com recheio cremoso para quem quer um doce sofisticado.</p>
+            <div class="product-meta"><div><span class="tiny">caixa com 12 un.</span><span class="price">R$ 42,00</span></div><a class="btn btn-primary btn-small" data-doce="Trufa (caixa com 12 un.)" href="#pedidos">Pedir</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=900&q=80" alt="Doces variados" loading="lazy" /></div>
+          <div class="product-info">
+            <h3>Cajuzinho</h3>
+            <p>Tradicional, cremoso e com toque de castanha.</p>
+            <div class="product-meta"><div><span class="tiny">caixa com 20 un.</span><span class="price">R$ 32,00</span></div><a class="btn btn-primary btn-small" data-doce="Cajuzinho (caixa com 20 un.)" href="#pedidos">Pedir</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-pedir">
+    <div class="container">
+      <div class="section-head">
+        <h2>Como fazer seu pedido</h2>
+        <p>Simples, rápido e personalizado conforme o seu evento.</p>
+      </div>
+      <ol class="steps">
+        <li class="step"><div class="step-number">1</div><h3>Escolha</h3><p>Selecione os doces e a quantidade para a sua festa.</p></li>
+        <li class="step"><div class="step-number">2</div><h3>Solicite</h3><p>Envie o pedido pelo formulário ou direto no WhatsApp.</p></li>
+        <li class="step"><div class="step-number">3</div><h3>Aprove</h3><p>Receba o orçamento com valor e prazo de entrega.</p></li>
+        <li class="step"><div class="step-number">4</div><h3>Receba</h3><p>Tudo pronto e bem embalado, no dia combinado.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="parties" id="festas">
+    <div class="container parties-grid">
+      <div>
+        <h2>Orçamento para festas e eventos</h2>
+        <p>Atendemos festas infantis, casamentos, aniversários, chás e eventos corporativos.</p>
+        <ul class="check-list">
+          <li>Sabores personalizados</li>
+          <li>Quantidade conforme o número de convidados</li>
+          <li>Embalagem e apresentação especiais</li>
+          <li>Entrega com cuidado e pontualidade</li>
+        </ul>
+      </div>
+      <div class="pricing-table">
+        <div class="pricing-card">
+          <h3>Mini Festa</h3><div class="big-price">R$ 120</div>
+          <ul><li>20 doces</li><li>2 sabores</li><li>Entrega local</li></ul>
+          <a class="btn btn-small" data-evento="Mini Festa (20 doces)" href="#pedidos">Quero este</a>
+        </div>
+        <div class="pricing-card featured">
+          <h3>Festa Média</h3><div class="big-price">R$ 260</div>
+          <ul><li>50 doces</li><li>3 sabores</li><li>Embalagem especial</li></ul>
+          <a class="btn btn-small" data-evento="Festa Média (50 doces)" href="#pedidos">Quero este</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Evento Grande</h3><div class="big-price">R$ 500+</div>
+          <ul><li>100+ doces</li><li>Montagem sob medida</li><li>Atendimento exclusivo</li></ul>
+          <a class="btn btn-small" data-evento="Evento Grande (100+ doces)" href="#pedidos">Quero este</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <div class="container">
+      <div class="section-head">
+        <h2>Quem provou, recomenda</h2>
+        <p>Troque estes textos de exemplo por depoimentos reais dos seus clientes.</p>
+      </div>
+      <div class="testimonials-grid">
+        <blockquote><p>Os doces chegaram lindos e no horário. Acabaram em minutos na festa!</p><cite>Nome do cliente, aniversário</cite></blockquote>
+        <blockquote><p>Atendimento atencioso e sabor de doce caseiro. Já encomendei de novo.</p><cite>Nome do cliente, chá de bebê</cite></blockquote>
+        <blockquote><p>Fizeram exatamente o que pedi para o evento da empresa. Recomendo.</p><cite>Nome do cliente, evento corporativo</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="pedidos">
+    <div class="container order-grid">
+      <div class="order-info">
+        <h2>Faça seu pedido</h2>
+        <p>Conte o tipo de evento e os sabores que você quer. Respondemos com um orçamento personalizado.</p>
+        <ul class="contact-list">
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/5514991875901" target="_blank" rel="noopener">(14) 99187-5901</a></li>
+          <li><strong>E-mail:</strong> <a href="mailto:contato@docesgirasonhos.com.br">contato@docesgirasonhos.com.br</a></li>
+          <li><strong>Atendimento:</strong> segunda a sábado, das 9h às 18h</li>
+          <li><strong>Entrega:</strong> São Manuel e Botucatu</li>
+        </ul>
+      </div>
+      <div class="order-form">
+        <h2>Solicitar orçamento</h2>
+        <form id="pedido-form">
+          <div class="row">
+            <label>Nome<input type="text" name="nome" placeholder="Seu nome" required autocomplete="name" /></label>
+            <label>Telefone<input type="tel" name="telefone" placeholder="(14) 00000-0000" required autocomplete="tel" /></label>
+          </div>
+          <div class="row">
+            <label>Tipo de evento
+              <select name="evento">
+                <option>Aniversário</option><option>Casamento</option><option>Festa infantil</option><option>Corporativo</option><option>Outro</option>
+              </select>
+            </label>
+            <label>Quantidade<input type="text" name="quantidade" placeholder="Ex.: 50 doces" required /></label>
+          </div>
+          <label>Doces desejados<input type="text" id="doces-desejados" name="doces" placeholder="Brigadeiro, palha italiana, cocada..." required /></label>
+          <label>Mensagem<textarea name="mensagem" placeholder="Data, local e detalhes do evento."></textarea></label>
+          <button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button>
+          <p class="form-note">Ao enviar, o WhatsApp abre com a mensagem pronta para você conferir.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 Doces Girasonhos</div>
+    <div>Doces artesanais para momentos especiais</div>
+  </div>
+</footer>
+
+<a class="whats-float" href="https://wa.me/5514991875901?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.3.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.800 1.500 5.700 1.500 7 0 12.700-5.600 12.700-12.600S23 3 16 3zm0 23c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.300 1.100 1.100-4.200-.3-.4A10.300 10.300 0 0 1 5.600 15.600C5.600 9.900 10.300 5.300 16 5.300s10.400 4.600 10.400 10.300S21.700 26 16 26zm5.700-7.700c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5-.1-.2-.7-1.700-1-2.300-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.200 5.100 4.500.7.300 1.300.5 1.700.6.700.2 1.400.2 1.900.1.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+(function () {
+  var NUMERO = "5514991875901";
+  var form = document.getElementById("pedido-form");
+  var doces = document.getElementById("doces-desejados");
+
+  // Botões "Pedir" nos cards: acrescentam o doce ao campo do formulário
+  document.querySelectorAll("[data-doce]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var item = btn.getAttribute("data-doce");
+      if (doces.value.indexOf(item) === -1) {
+        doces.value = doces.value ? doces.value + ", " + item : item;
+      }
+    });
+  });
+
+  // Botões dos pacotes: preenchem a quantidade
+  document.querySelectorAll("[data-evento]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      form.elements["quantidade"].value = btn.getAttribute("data-evento");
+    });
+  });
+
+  // Envio: monta a mensagem e abre o WhatsApp
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    var linhas = [
+      "Olá! Gostaria de pedir um orçamento.",
+      "Nome: " + f["nome"].value,
+      "Telefone: " + f["telefone"].value,
+      "Evento: " + f["evento"].value,
+      "Quantidade: " + f["quantidade"].value,
+      "Doces: " + f["doces"].value
+    ];
+    if (f["mensagem"].value.trim()) linhas.push("Detalhes: " + f["mensagem"].value.trim());
+    window.open("https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(linhas.join("\n")), "_blank", "noopener");
+  });
+})();
+</script>
+</body>
+</html>
